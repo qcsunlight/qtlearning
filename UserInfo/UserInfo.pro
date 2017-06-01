@@ -27,6 +27,3 @@ SOURCES += main.cpp\
         userinfo.cpp
 
 HEADERS  += userinfo.h
-
-DISTFILES += \
-    UiForm.ui.qml
