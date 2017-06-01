@@ -1,6 +1,7 @@
-﻿#ifndef USERINFO_H
-#define USERINFO_H
+﻿#ifndef BASEINFO_H
+#define BASEINFO_H
 
+#include <QWidget>
 #include <QDialog>
 #include <QLabel>
 #include <QLineEdit>
@@ -12,15 +13,15 @@
 #include <QPixmap>
 #include <QImage>
 
-#define ICON ":/icon.png"
+#define ICON ":/icon/icon.png"
 
-class UserInfo : public QDialog
+class BaseInfo : public QWidget
 {
     Q_OBJECT
-
 public:
-    UserInfo(QWidget *parent = 0);
-    ~UserInfo();
+    BaseInfo(QWidget *parent=0);
+    ~BaseInfo(){}
+    void initlayout();
 private:
     //左侧
     QLabel *UserNameLabel;
@@ -49,8 +50,7 @@ private:
     QHBoxLayout *ButtomLayout;
 
     QGridLayout *mainLayout;
-public:
-    void initlayout();
+
 };
 
-#endif // USERINFO_H
+#endif // BASEINFO_H

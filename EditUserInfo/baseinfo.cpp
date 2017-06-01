@@ -1,18 +1,11 @@
-﻿#include "userinfo.h"
+﻿#include "baseinfo.h"
 
-UserInfo::UserInfo(QWidget *parent)
-    : QDialog(parent)
+BaseInfo::BaseInfo(QWidget *parent) :
+    QWidget(parent)
 {
-    setWindowTitle(tr("UserInfo"));
     initlayout();
 }
-
-UserInfo::~UserInfo()
-{
-
-}
-
-void UserInfo::initlayout()
+void BaseInfo::initlayout()
 {
     //resize(800,600);
     //左侧
@@ -55,6 +48,7 @@ void UserInfo::initlayout()
     //右侧
     HeadLabel = new QLabel(tr("头像"));
     HeadIconLabel = new QLabel(this);
+    //QImage *image = new QImage("icon.png");
     QPixmap icon(ICON);
     HeadIconLabel->setPixmap(icon);
     HeadIconLabel->resize(icon.width(),icon.height());

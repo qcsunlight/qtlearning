@@ -27,3 +27,6 @@ SOURCES += main.cpp\
         userinfo.cpp
 
 HEADERS  += userinfo.h
+
+RESOURCES += \
+    image.qrc
